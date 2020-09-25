@@ -4,6 +4,10 @@ body {
 }
 p, h2, ul{
     margin:0;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 
@@ -34,8 +38,7 @@ p, h2, ul{
     flex-direction: row;
     flex-wrap: nowrap;
     align-items:center;
-    margin-left: 20px;
-    
+    margin-left:-160px;
 }
 
 .language, .person, .arrow {
@@ -222,7 +225,7 @@ p, h2, ul{
  .article__top {
     display: flex;
     flex-direction: column;
-    
+    min-width: 180px;
  }
 
 
@@ -653,12 +656,11 @@ p, h2, ul{
 
 .image__logo, .image__big {
     border-radius: 7px 7px 7px 7px;
-
 }
 
 
 .article--big {
-    width: 280px;
+    max-width: 280px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -667,8 +669,8 @@ p, h2, ul{
     margin-top:20px;
     border-radius: 7px 7px 7px 7px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    max-height: 180px;
     
-    top: 0;
     /* пределяет 
     расстояние от верхнего края родительского элемента до верхнего края 
     дочернего элемента. 
@@ -680,9 +682,6 @@ p, h2, ul{
     Если для родительского элемента задано position: relative, 
     то абсолютное позиционирование дочерних элементов определяет 
     их положение от верхнего края родителя  */
-    left: 0;
-    right: 0;
-    z-index: 1000; 
 }
 
 .container {
@@ -704,18 +703,27 @@ p, h2, ul{
 .play {
     font-size: 60px;
     color: #fff;
+    margin-top: 50px;
 }
 
 .video {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+}
+
+.video__icon {
+    z-index: 2;
+     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     align-items: center;
+    margin-top: -4px;
 }
 
 .image__play {
-   margin-bottom: -130px;
-   z-index: 1;
+   margin-bottom: -110px;
+   
 }
 
 
